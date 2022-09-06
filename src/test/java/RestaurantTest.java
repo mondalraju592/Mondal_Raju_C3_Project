@@ -74,7 +74,6 @@ class RestaurantTest {
                 ()->restaurant.removeFromMenu("French fries"));
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
     // Applying TDD Approach
     @Test
     public void selecting_items_from_menu_and_checking_if_the_total_cost_is_equal_to_the_sum_of_price_of_selected_items_add(){
@@ -82,14 +81,17 @@ class RestaurantTest {
         Item temp = restaurant.findItemByName("Sweet corn soup");
         if(temp!=null)
             selectedItems.add(temp);
-            temp = restaurant.findItemByName("Vegetable lasagne");
-            if(temp!=null)
-                selectedItems.add(temp);
+        temp = restaurant.findItemByName("Vegetable lasagne");
+        if(temp!=null)
+            selectedItems.add(temp);
 
-            int totalCost = restaurant.getTotalCostOfItems(selectedItems);
+        int totalCost = restaurant.getTotalCostOfItems(selectedItems);
 
-            assertEquals(totalCost,388);
+        assertEquals(totalCost,388);
 
 
     }
-}
+
+
+
+    }
